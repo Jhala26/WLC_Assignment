@@ -1,0 +1,172 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // Your code here!
+        
+        
+         int breads = 15;
+	        
+	        int vegPattice = 3;
+	        int nonVegPattice = 2;
+	        int TikkiPattice = 1;
+	        
+	        int priceVegBurger = 100;
+	        int priceNonVegBurger = 125;
+	        int priceTikkiBurger = 112;
+
+	        int maxProfit = 0;
+	        
+	        int breads_remaining = breads;
+	        
+	        
+
+	            
+	            if(priceNonVegBurger > priceVegBurger && priceNonVegBurger > priceTikkiBurger){
+	                
+	                while(nonVegPattice > 0 && breads_remaining >= 2){
+	                    
+	                    nonVegPattice--;
+	                    breads_remaining -= 2;
+	                    maxProfit += priceNonVegBurger;
+	                }
+	                
+	                if(priceVegBurger > priceTikkiBurger){
+	                    
+	                    while(vegPattice > 0 && breads_remaining >= 2){
+	                        
+	                        vegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceVegBurger;
+	                    }
+	                    
+	                    while(TikkiPattice > 0 && breads_remaining >= 2){
+	                        
+	                        TikkiPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceTikkiBurger;
+	                    }
+	                    
+	                    
+	                }
+	                else{
+	                    
+	                    while(TikkiPattice > 0 && breads_remaining >= 2){
+	                        
+	                        TikkiPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceTikkiBurger;
+	                    }
+	                    
+	                    while(vegPattice > 0 && breads_remaining >= 2){
+	                        
+	                        vegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceVegBurger;
+	                    }
+	                    
+	                }
+	                
+	            }
+	            else if (priceTikkiBurger > priceNonVegBurger && priceTikkiBurger > priceVegBurger){
+	                
+	                while(TikkiPattice > 0 && breads_remaining >= 2){
+	                        
+	                        TikkiPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceTikkiBurger;
+	                }
+	                
+	                if(priceNonVegBurger > priceVegBurger){
+	                    
+	                    while(nonVegPattice > 0 && breads_remaining >= 2){
+	                    
+	                        nonVegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceNonVegBurger;
+	                    }
+	                    
+	                    while(vegPattice > 0 && breads_remaining >= 2){
+	                        
+	                        vegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceVegBurger;
+	                    }
+	                }
+	                else{
+	                    
+	                    while(vegPattice > 0 && breads_remaining >= 2){
+	                        
+	                        vegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceVegBurger;
+	                    }
+	                    
+	                    while(nonVegPattice > 0 && breads_remaining >= 2){
+	                    
+	                        nonVegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceNonVegBurger;
+	                    }
+	                }
+	                    
+	                    
+	                
+	            }
+	            else if(priceVegBurger > priceNonVegBurger && priceVegBurger > priceTikkiBurger){
+	                
+	                while(vegPattice > 0 && breads_remaining >= 2){
+	                        
+	                        vegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceVegBurger;
+	                }
+	                
+	                if(priceNonVegBurger > priceTikkiBurger){
+	                    
+	                   while(nonVegPattice > 0 && breads_remaining >= 2){
+	                    
+	                        nonVegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceNonVegBurger;
+	                    }
+	                    
+	                    while(TikkiPattice > 0 && breads_remaining >= 2){
+	                        
+	                        TikkiPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceTikkiBurger;
+	                    }
+	                }
+	                else{
+	                    
+	                    while(TikkiPattice > 0 && breads_remaining >= 2){
+	                        
+	                        TikkiPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceTikkiBurger;
+	                    }
+	                    
+	                    while(nonVegPattice > 0 && breads_remaining >= 2){
+	                    
+	                        nonVegPattice--;
+	                        breads_remaining -= 2;
+	                        maxProfit += priceNonVegBurger;
+	                    }
+	                }
+	                
+	            }
+	            
+	            
+	            
+	            
+
+	        
+	        
+	        System.out.println(maxProfit);
+	        
+        
+        
+    }
+}
+
